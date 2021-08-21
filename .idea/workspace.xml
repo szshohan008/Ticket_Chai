@@ -80,13 +80,6 @@
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/icons/Icon-512.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/emirates-airlines-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/emirates-airlines-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/logo/emirates-airlines-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/detail-screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/checkout_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/seat_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/Flight/flight_page.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Blood-Donation-App" beforeDir="false" afterPath="$PROJECT_DIR$/../Blood-Donation-App" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dokanee-Cpnael-Mobile-App-Shohan" beforeDir="false" afterPath="$PROJECT_DIR$/../Dokanee-Cpnael-Mobile-App-Shohan" afterDir="false" />
@@ -1323,26 +1316,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="224" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1627444944021" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1629580735178">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1629582196715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1629580735178" />
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom" timestamp="1629580839716">
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1629582196715" />
+    <state width="1323" height="173" key="GridCell.Tab.0.bottom" timestamp="1629582204942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629580839716" />
-    <state width="1323" height="173" key="GridCell.Tab.0.center" timestamp="1629580839715">
+    <state width="1323" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629582204942" />
+    <state width="1323" height="173" key="GridCell.Tab.0.center" timestamp="1629582204941">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629580839715" />
-    <state width="1323" height="173" key="GridCell.Tab.0.left" timestamp="1629580839715">
+    <state width="1323" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629582204941" />
+    <state width="1323" height="173" key="GridCell.Tab.0.left" timestamp="1629582204941">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629580839715" />
-    <state width="1323" height="173" key="GridCell.Tab.0.right" timestamp="1629580839716">
+    <state width="1323" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629582204941" />
+    <state width="1323" height="173" key="GridCell.Tab.0.right" timestamp="1629582204941">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629580839716" />
+    <state width="1323" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629582204941" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1629581230818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
