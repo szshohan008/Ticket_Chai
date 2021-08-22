@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
-import 'package:ticket_chai/Model/display/plane_curve.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 
-class payment extends StatefulWidget {
+class Payment extends StatefulWidget {
   @override
-  _paymentState createState() => _paymentState();
+  _PaymentState createState() => _PaymentState();
 }
 
-class _paymentState extends State<payment> {
+class _PaymentState extends State<Payment> {
   // bool pressbutton = false;
 
   // onButtonClick() {
@@ -24,8 +23,7 @@ class _paymentState extends State<payment> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-              left: 50.0, right: 50.0, top: 30.0, bottom: 0.0),
+          padding: const EdgeInsets.only(left: 50.0, right: 50.0, top: 30.0, bottom: 0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,8 +31,7 @@ class _paymentState extends State<payment> {
               SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               Padding(
                 padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * 0.55,
-                    top: MediaQuery.of(context).size.height * 0.02),
+                    left: MediaQuery.of(context).size.width * 0.55, top: MediaQuery.of(context).size.height * 0.02),
                 child: RichText(
                   text: TextSpan(
                     children: [
@@ -85,10 +82,7 @@ class _paymentState extends State<payment> {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 25.0),
-                child: Container(
-                    width: MediaQuery.of(context).size.width * 2.1,
-                    height: 0.5,
-                    color: kTextColor),
+                child: Container(width: MediaQuery.of(context).size.width * 2.1, height: 0.5, color: kTextColor),
               ),
             ],
           ),
@@ -98,7 +92,7 @@ class _paymentState extends State<payment> {
   }
 
   Widget buildPay({String name, bool click}) {
-    return FlatButton.icon(
+    return TextButton.icon(
       icon: Icon(
         Ionicons.ios_checkmark,
         color: click ? kFloatingButton : Colors.white,
