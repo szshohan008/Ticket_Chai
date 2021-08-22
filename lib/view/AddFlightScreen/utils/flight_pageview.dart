@@ -8,17 +8,38 @@ import 'package:ticket_chai/view/AddFlightScreen/Checkout/checkoutForm.dart';
 import '../../../Constants/TextConstants.dart';
 
 class FlightPageView extends StatefulWidget {
+  FlightPageView(TextEditingController fromController, TextEditingController toController, TextEditingController dateController,
+      TextEditingController tripId, Function({String boardingPoint, String endingPoint, String tripId}) nextFunction) {
+    this.fromController = fromController;
+    this.toController = toController;
+    this.dateController = dateController;
+    this.tripId = tripId;
+    this.nextFunction = nextFunction;
+  }
+
+  TextEditingController fromController = TextEditingController();
+  TextEditingController toController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
+  TextEditingController tripId = TextEditingController();
+  Function({String boardingPoint, String endingPoint, String tripId}) nextFunction;
+
   @override
-  _FlightPageViewState createState() => _FlightPageViewState();
+  _FlightPageViewState createState() => _FlightPageViewState(fromController, toController, dateController, tripId);
 }
 
 class _FlightPageViewState extends State<FlightPageView> {
-  _FlightPageViewState() {
-    // SearchBusModel buses = getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21");
-    // print(buses.data.length);
-    //
-    // this.buses = buses;
+  _FlightPageViewState(TextEditingController fromController, TextEditingController toController,
+      TextEditingController dateController, TextEditingController tripId) {
+    this.fromController = fromController;
+    this.toController = toController;
+    this.dateController = dateController;
+    this.tripId = tripId;
   }
+
+  TextEditingController tripId = TextEditingController();
+  TextEditingController fromController = TextEditingController();
+  TextEditingController toController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
 
   final Widget svgEmiratesImage = SvgPicture.asset(
     '',
@@ -26,29 +47,13 @@ class _FlightPageViewState extends State<FlightPageView> {
     height: 60.0,
   );
 
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   getBusData();
-  // }
-
   SearchBusModel buses = SearchBusModel();
-
-  // Future<void> getBusData() async {
-  //   setState(() async {
-  //     buses = await getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21");
-  //     print(buses.data.length);
-  //   });
-  // }
-
-  // final busSearchModel = busSearchModelFromJson(jsonString);
 
   @override
   Widget build(BuildContext context) {
     bool changeCardColor = false;
     return FutureBuilder(
-      future: getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21"),
+      future: getBusList(from: fromController.text, to: toController.text, date: dateController.text),
       builder: (BuildContext context, AsyncSnapshot<SearchBusModel> snapshot) {
         if (snapshot.hasData) {
           buses = snapshot.data;
@@ -74,7 +79,16 @@ class _FlightPageViewState extends State<FlightPageView> {
                   scrollDirection: Axis.vertical,
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
-                        onTap: () => changeCardColor = !changeCardColor,
+                        // onTap: () {
+                        //   tripId = buses.data[index].id;
+                        //   print(tripId);
+                        // },
+                        onTap: () {
+                          print(buses.data[index].id);
+                          print(0);
+                          tripId.text = buses.data[index].id;
+                          widget.nextFunction();
+                        },
                         child: card(svgEmiratesImage, changeCardColor, buses.data[index]));
                   },
                   // children: [

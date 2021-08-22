@@ -22,6 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="73d00b86-495d-4c99-b2b7-1c72ecb151bc" name="Default Changelist" comment="Edited">
 <<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/../ebook_reader/assets/images/banner1.jpg" afterDir="false" />
@@ -1224,19 +1225,17 @@
       <change afterPath="$PROJECT_DIR$/lib/view/widgets/custom_input.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+=======
+    <list default="true" id="73d00b86-495d-4c99-b2b7-1c72ecb151bc" name="Default Changelist" comment="Implemented Some API">
+      <change afterPath="$PROJECT_DIR$/lib/model/TicketPurchaseModel.dart" afterDir="false" />
+>>>>>>> 82940a425ecd3292257e029cfb9719b95543064d
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/buses.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/buses.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/detail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/detail.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/menu_icon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/menu_icon.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/plane_curve.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/plane_curve.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/select_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/select_bar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/display/title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/display/title.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/networking/BusNetwork.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/networking/BusNetwork.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/Checkout/checkoutForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/Checkout/checkoutForm.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/Checkout/utils/textInfo.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/addTrip.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/addTrip.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/Route_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/Route_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/checkout_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/checkout_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/flight_pageview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/flight_pageview.dart" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/seat_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/seat_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/Home/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/Home/homePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/Home/utils/customDrawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/Home/utils/customDrawer.dart" afterDir="false" />
@@ -1245,6 +1244,9 @@
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticket_chai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ticket_chai.iml" afterDir="false" />
 >>>>>>> 1ccc8c88926dd4eaa002d1c70cce655af4d85118
+=======
+      <change beforePath="$PROJECT_DIR$/lib/view/widgets/custom_input.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widgets/custom_input.dart" afterDir="false" />
+>>>>>>> 82940a425ecd3292257e029cfb9719b95543064d
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1284,8 +1286,12 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/view" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="dart.settings" />
 >>>>>>> 1ccc8c88926dd4eaa002d1c70cce655af4d85118
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+>>>>>>> 82940a425ecd3292257e029cfb9719b95543064d
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -1376,7 +1382,14 @@
       <updated>1629651951068</updated>
 >>>>>>> 1ccc8c88926dd4eaa002d1c70cce655af4d85118
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implemented Some API">
+      <created>1629662374113</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629662374113</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1398,7 +1411,8 @@
     <MESSAGE value="TicketChai" />
     <MESSAGE value="add_flight" />
     <MESSAGE value="Edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited" />
+    <MESSAGE value="Implemented Some API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Some API" />
   </component>
   <component name="WindowStateProjectService">
     <state x="276" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625919236743">
@@ -1444,36 +1458,36 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1629582349232" />
-    <state width="1876" height="252" key="GridCell.Tab.0.bottom" timestamp="1629661713223">
+    <state width="1876" height="188" key="GridCell.Tab.0.bottom" timestamp="1629667581185">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="960" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629618859310" />
-    <state width="1876" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629661713223" />
-    <state width="1876" height="252" key="GridCell.Tab.0.center" timestamp="1629661713222">
+    <state width="1876" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629667581185" />
+    <state width="1876" height="188" key="GridCell.Tab.0.center" timestamp="1629667581185">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="960" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
-    <state width="1876" height="252" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629661713222" />
-    <state width="1876" height="252" key="GridCell.Tab.0.left" timestamp="1629661713222">
+    <state width="1876" height="188" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629667581185" />
+    <state width="1876" height="188" key="GridCell.Tab.0.left" timestamp="1629667581183">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="960" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
-    <state width="1876" height="252" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629661713222" />
-    <state width="1876" height="252" key="GridCell.Tab.0.right" timestamp="1629661713223">
+    <state width="1876" height="188" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629667581183" />
+    <state width="1876" height="188" key="GridCell.Tab.0.right" timestamp="1629667581185">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="960" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
-    <state width="1876" height="252" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629661713223" />
-    <state x="2179" y="13" key="SettingsEditor" timestamp="1629660497480">
+    <state width="1876" height="188" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629667581185" />
+    <state x="2179" y="13" key="SettingsEditor" timestamp="1629664618969">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1629581230818" />
-    <state x="2179" y="13" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629660497480" />
-    <state x="2307" y="140" key="Vcs.Push.Dialog.v2" timestamp="1629651956115">
+    <state x="2179" y="13" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629664618969" />
+    <state x="2307" y="140" key="Vcs.Push.Dialog.v2" timestamp="1629662376004">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1629582361064" />
-    <state x="2307" y="140" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629651956115" />
+    <state x="2307" y="140" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1629662376004" />
     <state x="2587" y="258" width="585" height="534" key="find.popup" timestamp="1629652769370">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

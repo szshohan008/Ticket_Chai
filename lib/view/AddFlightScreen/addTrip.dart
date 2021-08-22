@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Model/display/select_bar.dart';
 import 'package:ticket_chai/Model/display/title.dart';
+import 'package:ticket_chai/model/TicketPurchaseModel.dart';
+import 'package:ticket_chai/networking/BusNetwork.dart';
 import 'package:ticket_chai/view/AddFlightScreen/Checkout/checkoutForm.dart';
 import 'package:ticket_chai/view/AddFlightScreen/utils/Route_page.dart';
 import 'package:ticket_chai/view/AddFlightScreen/utils/checkout_page.dart';
@@ -39,7 +41,28 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
     }
   }
 
-  nextFunction() {
+  TextEditingController fromController = TextEditingController();
+  TextEditingController toController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController phoneNoController = TextEditingController();
+  TextEditingController totalSeatController = TextEditingController();
+  TextEditingController tripIdSeatController = TextEditingController();
+
+  nextFunction({String tripId, String boardingPoint, String endingPoint})  {
+    print(currentIndex);
+    if (currentIndex == 0) {
+    } else if (currentIndex == 1) {
+    } else if (currentIndex == 2) {
+      print(nameController.text);
+      print(tripId);
+      TicketPurchaseModel ticketPurchaseModel = TicketPurchaseModel(
+        address: "", boardingPoint: "", droppingPoint: "", name: nameController.text,
+          phoneNo: phoneNoController.text, totalSeat: int.parse(totalSeatController.text), tripId: tripIdSeatController.text
+      );
+
+       buyTicket(ticketPurchaseModel: ticketPurchaseModel);
+    }
     _pageController.nextPage(duration: _kDuration, curve: _kCurve);
   }
 
@@ -68,7 +91,7 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                BuildHead(),
+                // BuildHead(),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 Align(alignment: Alignment(-0.9, 0), child: HeadTitle(title: 'Ticket Chai')),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
@@ -92,10 +115,10 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
                             controller: _pageController,
                             onPageChanged: onChangeFunction,
                             children: [
-                              RoutePage(),
-                              FlightPageView(),
+                              RoutePage(fromController, toController, dateController),
+                              FlightPageView(fromController, toController, dateController, tripIdSeatController, nextFunction),
                               // SeatPage(),
-                              CheckoutFrom(),
+                              CheckoutFrom(nameController, phoneNoController, totalSeatController),
                               Payment(),
                             ],
                           ),
@@ -109,7 +132,7 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
           ),
         ],
       ),
-      floatingActionButton: show
+      floatingActionButton: true
           ? Padding(
               padding: const EdgeInsets.only(right: 30.0, bottom: 5.0),
               child: FloatingActionButton(
