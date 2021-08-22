@@ -2,54 +2,47 @@ import 'package:flutter/material.dart';
 import 'package:framy_annotation/framy_annotation.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/view/Home/utils/Banner/Banner.dart';
+
 import '../../Model/display/buses.dart';
-import 'utils/header.dart';
-import '../../Model/display/title.dart';
 import '../AddFlightScreen/addTrip.dart';
-import 'package:ticket_chai/Constants/TextConstants.dart';
+import 'utils/header.dart';
 
 @framyWidget
 class HomePage extends StatefulWidget {
   static const String id = 'home_page';
 
   final Header header;
+
   HomePage({Key key, @required this.header}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
   Animation _profilePictureAnimation;
-  Animation _contentAnimation;
+  // Animation _contentAnimation;
   Animation _listAnimation;
   Animation _fabAnimation;
 
   @override
   void initState() {
     super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 2));
 
-    _profilePictureAnimation = Tween(begin: 0.0, end: 1.0).animate(
-        CurvedAnimation(
-            parent: _controller,
-            curve: Interval(0.0, 0.20, curve: Curves.easeOut)));
+    _profilePictureAnimation = Tween(begin: 0.0, end: 1.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.0, 0.20, curve: Curves.easeOut)));
 
-    _contentAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.20, 0.40, curve: Curves.easeOut)));
+    // _contentAnimation = Tween(begin: 0.0, end: 1.0)
+    //     .animate(CurvedAnimation(parent: _controller, curve: Interval(0.20, 0.40, curve: Curves.easeOut)));
 
-    _listAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.40, 0.75, curve: Curves.easeOut)));
+    _listAnimation = Tween(begin: 0.0, end: 1.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.40, 0.75, curve: Curves.easeOut)));
 
-    _fabAnimation = Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.75, 1.0, curve: Curves.easeOut)));
+    _fabAnimation = Tween(begin: 0.0, end: 1.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.75, 1.0, curve: Curves.easeOut)));
 
     _controller.forward();
     _controller.addListener(() {
@@ -74,14 +67,16 @@ class _HomePageState extends State<HomePage>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                Transform.scale(
-                    scale: _profilePictureAnimation.value,
-                    child: widget.header),
+                Transform.scale(scale: _profilePictureAnimation.value, child: widget.header),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.0),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.0),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Banners(),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 _buildSheet(),
               ],
             ),

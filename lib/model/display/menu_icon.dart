@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ticket_chai/Constants/ColorConstants.dart';
+
 import '../../view/Home/utils/customDrawer.dart';
 
 class MenuIcon extends StatelessWidget {
@@ -19,8 +19,7 @@ class MenuIcon extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:
-              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.04),
+          padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.04),
           child: Container(
               height: MediaQuery.of(context).size.height * 0.004,
               width: MediaQuery.of(context).size.width * 0.04,

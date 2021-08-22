@@ -7,15 +7,13 @@ class CustomDrawer extends StatefulWidget {
 
   const CustomDrawer({Key key, @required this.child}) : super(key: key);
 
-  static CustomDrawerState of(BuildContext context) =>
-      context.findAncestorStateOfType<CustomDrawerState>();
+  static CustomDrawerState of(BuildContext context) => context.findAncestorStateOfType<CustomDrawerState>();
 
   @override
   CustomDrawerState createState() => new CustomDrawerState();
 }
 
-class CustomDrawerState extends State<CustomDrawer>
-    with SingleTickerProviderStateMixin {
+class CustomDrawerState extends State<CustomDrawer> with SingleTickerProviderStateMixin {
   static const Duration toggleDuration = Duration(milliseconds: 250);
   static const double maxSlide = 225;
   static const double minDragStartEdge = 60;
@@ -88,10 +86,8 @@ class CustomDrawerState extends State<CustomDrawer>
   }
 
   void _onDragStart(DragStartDetails details) {
-    bool isDragOpenFromLeft = _animationController.isDismissed &&
-        details.globalPosition.dx < minDragStartEdge;
-    bool isDragCloseFromRight = _animationController.isCompleted &&
-        details.globalPosition.dx > maxDragStartEdge;
+    bool isDragOpenFromLeft = _animationController.isDismissed && details.globalPosition.dx < minDragStartEdge;
+    bool isDragCloseFromRight = _animationController.isCompleted && details.globalPosition.dx > maxDragStartEdge;
 
     _canBeDragged = isDragOpenFromLeft || isDragCloseFromRight;
   }
@@ -111,8 +107,7 @@ class CustomDrawerState extends State<CustomDrawer>
       return;
     }
     if (details.velocity.pixelsPerSecond.dx.abs() >= _kMinFlingVelocity) {
-      double visualVelocity = details.velocity.pixelsPerSecond.dx /
-          MediaQuery.of(context).size.width;
+      double visualVelocity = details.velocity.pixelsPerSecond.dx / MediaQuery.of(context).size.width;
 
       _animationController.fling(velocity: visualVelocity);
     } else if (_animationController.value < 0.5) {
@@ -132,8 +127,7 @@ class MyDrawer extends StatelessWidget {
         child: Theme(
           data: ThemeData(brightness: Brightness.dark),
           child: Padding(
-            padding: EdgeInsets.only(
-                left: 20.0, right: 20.0, top: 30.0, bottom: 0.0),
+            padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0, bottom: 0.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               // mainAxisSize: MainAxisSize.max,
@@ -153,9 +147,7 @@ class MyDrawer extends StatelessWidget {
                 _drawerTabs(icon: Ionicons.md_help_circle, tabName: 'Help'),
                 _drawerTabs(icon: Ionicons.md_settings, tabName: 'Settings'),
                 Container(
-                  margin: EdgeInsets.only(
-                      left: 16.0,
-                      top: MediaQuery.of(context).size.height * 0.02),
+                  margin: EdgeInsets.only(left: 16.0, top: MediaQuery.of(context).size.height * 0.02),
                   height: 1.0,
                   width: 250.0,
                   color: kTextColor,
@@ -184,7 +176,7 @@ class MyDrawer extends StatelessWidget {
   Widget _drawerTabs({@required IconData icon, @required String tabName}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
-      child: FlatButton(
+      child: TextButton(
         onPressed: () {},
         child: Row(
           children: [

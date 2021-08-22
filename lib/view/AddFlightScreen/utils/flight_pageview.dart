@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
-import 'package:ticket_chai/Model/display/plane_curve.dart';
-import 'package:ticket_chai/view/AddFlightScreen/utils/seat_page.dart';
+import 'package:ticket_chai/model/SearchBusModel.dart';
+import 'package:ticket_chai/networking/BusNetwork.dart';
+import 'package:ticket_chai/view/AddFlightScreen/Checkout/checkoutForm.dart';
+
 import '../../../Constants/TextConstants.dart';
 
 class FlightPageView extends StatefulWidget {
@@ -12,50 +13,92 @@ class FlightPageView extends StatefulWidget {
 }
 
 class _FlightPageViewState extends State<FlightPageView> {
+  _FlightPageViewState() {
+    // SearchBusModel buses = getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21");
+    // print(buses.data.length);
+    //
+    // this.buses = buses;
+  }
+
   final Widget svgEmiratesImage = SvgPicture.asset(
     '',
     color: kFloatingButton,
     height: 60.0,
   );
 
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   getBusData();
+  // }
+
+  SearchBusModel buses = SearchBusModel();
+
+  // Future<void> getBusData() async {
+  //   setState(() async {
+  //     buses = await getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21");
+  //     print(buses.data.length);
+  //   });
+  // }
+
+  // final busSearchModel = busSearchModelFromJson(jsonString);
+
   @override
   Widget build(BuildContext context) {
     bool changeCardColor = false;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-        ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-        Padding(
-          padding: EdgeInsets.only(left: 25.0, bottom: 10.0),
-          child: Text(
-            '2 Buses available',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        // SizedBox(height: 10.0),
-        Expanded(
-          child: ListView(
-            scrollDirection: Axis.vertical,
+    return FutureBuilder(
+      future: getBusList(from: "Dhaka", to: "Bandarban", date: "2021-08-21"),
+      builder: (BuildContext context, AsyncSnapshot<SearchBusModel> snapshot) {
+        if (snapshot.hasData) {
+          buses = snapshot.data;
+
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GestureDetector(
-                  onTap: () => changeCardColor = !changeCardColor,
-                  child: card(svgEmiratesImage, changeCardColor)),
-              GestureDetector(
-                  onTap: () => changeCardColor = !changeCardColor,
-                  child: card(svgEmiratesImage, changeCardColor)),
+              Container(
+                width: MediaQuery.of(context).size.width,
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              Padding(
+                padding: EdgeInsets.only(left: 25.0, bottom: 10.0),
+                child: Text(
+                  buses.data.length.toString() + ' Buses available',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              // SizedBox(height: 10.0),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: buses.data.length,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GestureDetector(
+                        onTap: () => changeCardColor = !changeCardColor,
+                        child: card(svgEmiratesImage, changeCardColor, buses.data[index]));
+                  },
+                  // children: [
+                  //   GestureDetector(onTap: () => changeCardColor = !changeCardColor, child: card(svgEmiratesImage, changeCardColor)),
+                  //   GestureDetector(onTap: () => changeCardColor = !changeCardColor, child: card(svgEmiratesImage, changeCardColor)),
+                  // ],
+                ),
+              ),
             ],
-          ),
-        ),
-      ],
+          );
+        } else {
+          return Stack(
+            children: [
+              Center(child: CircularProgressIndicator()),
+            ],
+          );
+        }
+      },
     );
   }
 
   // bool changeCardColor = false;
 
-  Card card(Widget svgEmiratesImage, bool changeCardColor) {
+  Card card(Widget svgEmiratesImage, bool changeCardColor, Datum data) {
     return Card(
       margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
       color: changeCardColor == true ? kTextColor : kMainColor,
@@ -76,22 +119,151 @@ class _FlightPageViewState extends State<FlightPageView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hanif Enterprice',
-                        style: changeCardColor == true
-                            ? kCardMainText
-                            : kCardMainText2,
+                        data.operatorName,
+                        // style: changeCardColor == true ? kCardMainText : kCardMainText2,
+                        style: TextStyle(fontSize: 20.0),
                       ),
                       SizedBox(height: 28.0),
-                      Text(
-                        'DATE',
-                        style: kCardSub2,
+                      Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'DATE',
+                                style: kCardSub2,
+                              ),
+                              Text(
+                                data.tripDate,
+                                style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Bus Type',
+                                style: kCardSub2,
+                              ),
+                              Text(
+                                data.busType,
+                                style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Seat Type',
+                                style: kCardSub2,
+                              ),
+                              Text(
+                                data.seatType,
+                                style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Seat Available',
+                                style: kCardSub2,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    (data.seatAvailable == null) ? data.totalSeat.toString() : data.seatAvailable.toString(),
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    "of",
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    data.totalSeat.toString(),
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                ],
+                              )
+                            ],
+                          )
+                        ],
                       ),
-                      Text(
-                        'MAY 19',
-                        style: changeCardColor == true
-                            ? kCardSubText
-                            : kCardSubTextWhite,
+                      SizedBox(
+                        height: 20,
                       ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text(
+                                'Boarding',
+                                style: kCardSub2,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    data.tripStartingPoint,
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    data.tripStartTime,
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 100,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Bus Type',
+                                style: kCardSub2,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    data.tripEndingPoint,
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    data.tripEndTime,
+                                    style: changeCardColor == true ? kCardSubText : kCardSubTextWhite,
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -115,27 +287,27 @@ class _FlightPageViewState extends State<FlightPageView> {
               children: [
                 Stack(
                   children: [
-                    TextButton(onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SeatPage()),
-                      );
-                    }, child: Text('View Seat',style: TextStyle(color: Colors.lightBlue),))
+                    TextButton(
+                      onPressed: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => CheckoutFrom()),
+                        // );
+                      },
+                      child: Text(
+                        'Book Ticket',
+                        style: TextStyle(color: Colors.lightBlue),
+                      ),
+                    )
                   ],
                 ),
                 Spacer(),
                 Text('Ticket Price', style: kTextStyle),
                 Padding(
                   padding: const EdgeInsets.only(left: 7.0, right: 3.0),
-                  child: Text('\$',
-                      style: changeCardColor == true
-                          ? kCardMainText
-                          : kCardMainText2),
+                  child: Text('\৳', style: changeCardColor == true ? kCardMainText : kCardMainText2),
                 ),
-                Text('170.00',
-                    style: changeCardColor == true
-                        ? kCardMainText
-                        : kCardMainText2),
+                Text(data.ticketFare.toString(), style: changeCardColor == true ? kCardMainText : kCardMainText2),
               ],
             )
           ],
@@ -144,8 +316,7 @@ class _FlightPageViewState extends State<FlightPageView> {
     );
   }
 
-  Padding cardPadding(
-      {double left, Color color, IconData icon, Color iconColor}) {
+  Padding cardPadding({double left, Color color, IconData icon, Color iconColor}) {
     return Padding(
       padding: EdgeInsets.only(left: left),
       child: Container(
@@ -167,8 +338,7 @@ class _FlightPageViewState extends State<FlightPageView> {
     );
   }
 
-  Widget flightDays(
-      {@required String day, @required String dayNum, bool isclick}) {
+  Widget flightDays({@required String day, @required String dayNum, bool isclick}) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 6.0),
       // height: 20.0,

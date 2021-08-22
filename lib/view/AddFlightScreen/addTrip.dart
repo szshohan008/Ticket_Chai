@@ -1,20 +1,20 @@
+//import 'package:ticket_chai/view/AddFlightScreen/utils/flight_pageview.dart';
+//import 'package:ticket_chai/view/AddFlightScreen/utils/checkout_page.dart';
+import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Model/display/select_bar.dart';
 import 'package:ticket_chai/Model/display/title.dart';
 import 'package:ticket_chai/view/AddFlightScreen/Checkout/checkoutForm.dart';
 import 'package:ticket_chai/view/AddFlightScreen/utils/Route_page.dart';
-//import 'package:ticket_chai/view/AddFlightScreen/utils/flight_pageview.dart';
-//import 'package:ticket_chai/view/AddFlightScreen/utils/checkout_page.dart';
-import 'package:flutter/material.dart';
-import 'package:ticket_chai/Constants/TextConstants.dart';
 import 'package:ticket_chai/view/AddFlightScreen/utils/checkout_page.dart';
 import 'package:ticket_chai/view/AddFlightScreen/utils/flight_pageview.dart';
-import 'package:ticket_chai/view/AddFlightScreen/utils/seat_page.dart';
+
 // import 'package:emirates_app/display/select_bar.dart';
 // import 'package:flutter_icons/flutter_icons.dart';
 
 class AddFlightScreen extends StatefulWidget {
   static const String id = 'add_flight_screen';
+
   @override
   _AddFlightScreenState createState() => _AddFlightScreenState();
 }
@@ -59,7 +59,8 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // resizeToAvoidBottomInset: false,
-      backgroundColor: kSemiColor,//Colors.white,
+      backgroundColor: kSemiColor,
+      //Colors.white,
       body: Stack(
         children: [
           SafeArea(
@@ -69,9 +70,7 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 BuildHead(),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Align(
-                    alignment: Alignment(-0.9, 0),
-                    child: HeadTitle(title: 'Ticket Chai')),
+                Align(alignment: Alignment(-0.9, 0), child: HeadTitle(title: 'Ticket Chai')),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 Expanded(
                   child: Container(
@@ -86,8 +85,7 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.06),
+                        SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                         Tabs(currentIndex: currentIndex),
                         Expanded(
                           child: PageView(
@@ -96,9 +94,9 @@ class _AddFlightScreenState extends State<AddFlightScreen> {
                             children: [
                               RoutePage(),
                               FlightPageView(),
-                              SeatPage(),
-                              checkoutPage(),
-                              payment(),
+                              // SeatPage(),
+                              CheckoutFrom(),
+                              Payment(),
                             ],
                           ),
                         ),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:framy_annotation/framy_annotation.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
-import 'package:ticket_chai/Constants/TextConstants.dart';
 import 'package:ticket_chai/view/WelcomeScreen/utils/AccessOption.dart';
 
 @framyWidget
@@ -14,8 +12,7 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen>
-    with SingleTickerProviderStateMixin {
+class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
   Animation _logoAnimation;
@@ -25,16 +22,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 8));
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 8));
 
-    _logoAnimation = Tween(begin: 50.0, end: 150.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.0, 0.40, curve: Curves.easeOut)));
+    _logoAnimation = Tween(begin: 50.0, end: 150.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.0, 0.40, curve: Curves.easeOut)));
 
-    _inputAnimation = Tween(begin: 90.0, end: 75.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.40, 0.60, curve: Curves.easeOut)));
+    _inputAnimation = Tween(begin: 90.0, end: 75.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.40, 0.60, curve: Curves.easeOut)));
 
     _controller.forward();
     _controller.addListener(() {
@@ -48,8 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     _controller.dispose();
   }
 
-  final Widget svgLogo =
-      Image.asset('assets/logo/TicketChai.jpg');
+  final Widget svgLogo = Image.asset('assets/logo/TicketChai.jpg');
 
   @override
   Widget build(BuildContext context) {
@@ -71,15 +64,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               customTextfield(
-                  labelName: 'E-MAIL',
-                  labelIcon: Entypo.email,
-                  keybordtype: TextInputType.emailAddress,
-                  obscure: false),
+                  labelName: 'E-MAIL', labelIcon: Entypo.email, keybordtype: TextInputType.emailAddress, obscure: false),
               customTextfield(
-                  labelName: 'PASSWORD',
-                  labelIcon: SimpleLineIcons.lock,
-                  keybordtype: TextInputType.text,
-                  obscure: true),
+                  labelName: 'PASSWORD', labelIcon: SimpleLineIcons.lock, keybordtype: TextInputType.text, obscure: true),
               AccessOption(),
             ],
           ),
@@ -91,10 +78,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   bool typeIn = false;
 
   Widget customTextfield(
-      {@required String labelName,
-      @required IconData labelIcon,
-      @required TextInputType keybordtype,
-      @required bool obscure}) {
+      {@required String labelName, @required IconData labelIcon, @required TextInputType keybordtype, @required bool obscure}) {
     return Container(
       height: _inputAnimation.value,
       padding: EdgeInsets.only(bottom: 10.0),
@@ -104,8 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 15.0, right: 7.0, top: 4.0, bottom: 14.0),
+                padding: const EdgeInsets.only(left: 15.0, right: 7.0, top: 4.0, bottom: 14.0),
                 child: Icon(
                   labelIcon,
                   color: kFloatingButton,
@@ -113,10 +96,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               SizedBox(width: 6.0),
-              Container(
-                  width: 0.5,
-                  height: 45.0,
-                  color: typeIn == true ? kFloatingButton : kTextColor),
+              Container(width: 0.5, height: 45.0, color: typeIn == true ? kFloatingButton : kTextColor),
               SizedBox(width: 14.0),
               Expanded(
                 child: TextFormField(
@@ -130,8 +110,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   onTap: () => typeIn = true,
                   cursorColor: kTextColor,
                   decoration: InputDecoration(
-                    focusedBorder:
-                        UnderlineInputBorder(borderSide: BorderSide.none),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                     focusColor: kTextColor,
                     labelText: labelName,
                     labelStyle: TextStyle(
@@ -141,17 +120,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       letterSpacing: 0.1,
                       fontWeight: FontWeight.w300,
                     ),
-                    enabledBorder:
-                        UnderlineInputBorder(borderSide: BorderSide.none),
+                    enabledBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                   ),
                 ),
               ),
             ],
           ),
           Container(
-              width: MediaQuery.of(context).size.width * 2.1,
-              height: 0.5,
-              color: typeIn == true ? kFloatingButton : kTextColor),
+              width: MediaQuery.of(context).size.width * 2.1, height: 0.5, color: typeIn == true ? kFloatingButton : kTextColor),
         ],
       ),
     );

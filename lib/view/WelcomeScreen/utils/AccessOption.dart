@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
-import 'package:ticket_chai/Constants/TextConstants.dart';
 import 'package:ticket_chai/view/Home/homePage.dart';
 
 class AccessOption extends StatefulWidget {
@@ -8,7 +7,7 @@ class AccessOption extends StatefulWidget {
   _AccessOptionState createState() => _AccessOptionState();
 }
 
-class _AccessOptionState extends State<AccessOption> with SingleTickerProviderStateMixin{
+class _AccessOptionState extends State<AccessOption> with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
   Animation _accesAnimation;
@@ -17,13 +16,10 @@ class _AccessOptionState extends State<AccessOption> with SingleTickerProviderSt
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 8));
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 8));
 
-
-    _accesAnimation = Tween(begin: 150.0, end: 170.0).animate(CurvedAnimation(
-        parent: _controller,
-        curve: Interval(0.60, 1.0, curve: Curves.easeOut)));
+    _accesAnimation = Tween(begin: 150.0, end: 170.0)
+        .animate(CurvedAnimation(parent: _controller, curve: Interval(0.60, 1.0, curve: Curves.easeOut)));
 
     _controller.forward();
     _controller.addListener(() {
@@ -62,9 +58,7 @@ class _AccessOptionState extends State<AccessOption> with SingleTickerProviderSt
               height: MediaQuery.of(context).size.height * 0.07,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: kFloatingButton,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  color: kFloatingButton, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(20.0))),
               child: Center(
                 child: Text(
                   'Log in',
@@ -113,4 +107,3 @@ class _AccessOptionState extends State<AccessOption> with SingleTickerProviderSt
     );
   }
 }
-

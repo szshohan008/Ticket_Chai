@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
-import 'package:ticket_chai/Constants/TextConstants.dart';
 
 class Tabs extends StatelessWidget {
   final int currentIndex;
+
   Tabs({this.currentIndex});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,12 +47,7 @@ class MyTab extends StatelessWidget {
   final String text;
   final int positionIndex, currentIndex;
 
-  MyTab(
-      {Key key,
-      @required this.positionIndex,
-      @required this.currentIndex,
-      @required this.text})
-      : super(key: key);
+  MyTab({Key key, @required this.positionIndex, @required this.currentIndex, @required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,9 +60,7 @@ class MyTab extends StatelessWidget {
             fontFamily: 'Gilroy',
             fontSize: 16.0,
             color: positionIndex == currentIndex ? kFloatingButton : kTextColor,
-            fontWeight: positionIndex == currentIndex
-                ? FontWeight.w800
-                : FontWeight.w300,
+            fontWeight: positionIndex == currentIndex ? FontWeight.w800 : FontWeight.w300,
           ),
         ),
         positionIndex == currentIndex

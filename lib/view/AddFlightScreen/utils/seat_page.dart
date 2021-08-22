@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 import 'package:ticket_chai/Model/display/plane_curve.dart';
@@ -26,18 +24,15 @@ class _SeatPageState extends State<SeatPage> {
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
                 child: ClipRRect(
                   child: Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
                     height: MediaQuery.of(context).size.height * 0.6,
                     width: MediaQuery.of(context).size.width * 0.5,
                     color: kTextColor.withOpacity(0.2),
                     child: Column(
                       children: [
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.0),
+                        SizedBox(height: MediaQuery.of(context).size.height * 0.0),
                         SizedBox(height: 30.0),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02),
+                        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                         Padding(
                           padding: EdgeInsets.only(left: 5.0),
                           child: Row(
@@ -48,8 +43,7 @@ class _SeatPageState extends State<SeatPage> {
                                   for (var i = 0; i < 2; i++)
                                     buildNumSeat(
                                         firstcolor: Colors.transparent,
-                                        firstborder:
-                                            kTextColor.withOpacity(0.4),
+                                        firstborder: kTextColor.withOpacity(0.4),
                                         secColor: Colors.transparent,
                                         secborder: kFloatingButton),
                                   buildNumSeat(
@@ -60,8 +54,7 @@ class _SeatPageState extends State<SeatPage> {
                                   for (var i = 0; i < 6; i++)
                                     buildNumSeat(
                                         firstcolor: Colors.transparent,
-                                        firstborder:
-                                            kTextColor.withOpacity(0.4),
+                                        firstborder: kTextColor.withOpacity(0.4),
                                         secColor: Colors.transparent,
                                         secborder: kFloatingButton),
                                 ],
@@ -139,8 +132,7 @@ class _SeatPageState extends State<SeatPage> {
     );
   }
 
-  Widget buildNumSeat(
-      {Color firstcolor, Color firstborder, Color secColor, Color secborder}) {
+  Widget buildNumSeat({Color firstcolor, Color firstborder, Color secColor, Color secborder}) {
     return Row(
       children: [
         Container(
