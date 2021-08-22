@@ -2,20 +2,25 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 
-
 class CustomInput extends StatefulWidget {
   CustomInput(
-      {@required String labelName, @required IconData labelIcon, @required TextInputType keyboardType, @required bool obscure}) {
+      {@required String labelName,
+      @required IconData labelIcon,
+      @required TextInputType keyboardType,
+      @required bool obscure,
+      @required TextEditingController controller}) {
     this.labelName = labelName;
     this.labelIcon = labelIcon;
     this.keyboardType = keyboardType;
     this.obscure = obscure;
+    this.controller = controller;
   }
 
   String labelName;
   IconData labelIcon;
   TextInputType keyboardType;
   bool obscure;
+  TextEditingController controller = TextEditingController();
 
   @override
   _CustomInputState createState() => _CustomInputState();
@@ -52,6 +57,7 @@ class _CustomInputState extends State<CustomInput> {
                   keyboardType: widget.keyboardType,
                   textCapitalization: TextCapitalization.none,
                   obscureText: widget.obscure,
+                  controller: widget.controller,
                   style: TextStyle(
                     fontSize: 20.0,
                     color: kFloatingButton,

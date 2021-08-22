@@ -1,21 +1,41 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 
 class RoutePage extends StatefulWidget {
+  RoutePage(TextEditingController fromController, TextEditingController toController, TextEditingController dateController) {
+    this.fromController = fromController;
+    this.toController = toController;
+    this.dateController = dateController;
+  }
+
+  TextEditingController fromController = TextEditingController();
+  TextEditingController toController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
+
   @override
-  _RoutePageState createState() => _RoutePageState();
+  _RoutePageState createState() => _RoutePageState(fromController, toController, dateController);
 }
 
 class _RoutePageState extends State<RoutePage> {
   List data;
 
+  _RoutePageState(
+      TextEditingController fromController, TextEditingController toController, TextEditingController dateController) {
+    this.fromController = fromController;
+    this.toController = toController;
+    this.dateController = dateController;
+  }
+
   @override
   void initState() {
     super.initState();
   }
+
+  TextEditingController fromController = TextEditingController();
+  TextEditingController toController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +48,18 @@ class _RoutePageState extends State<RoutePage> {
             child: _buildTrip(),
           ),
           SizedBox(height: 10.0),
-          _buildDetails(labelName: 'FROM', labelIcon: Entypo.location_pin, context: context),
-          _buildDetails(labelName: 'TO', labelIcon: Entypo.location, context: context),
-          _buildDetails(labelName: 'DATE OF Journey', labelIcon: SimpleLineIcons.calendar, context: context),
+          _buildDetails(labelName: 'FROM', labelIcon: Entypo.location_pin, context: context, controller: fromController),
+          _buildDetails(labelName: 'TO', labelIcon: Entypo.location, context: context, controller: toController),
+          _buildDetails(
+              labelName: 'DATE OF Journey', labelIcon: SimpleLineIcons.calendar, context: context, controller: dateController),
           // _buildDetails(labelName: 'DATE OF Return', labelIcon: SimpleLineIcons.calendar, context: context),
         ],
       ),
     );
   }
 
-  Widget _buildDetails({@required String labelName, @required IconData labelIcon, BuildContext context}) {
+  Widget _buildDetails(
+      {@required String labelName, @required IconData labelIcon, BuildContext context, TextEditingController controller}) {
     return Padding(
       padding: const EdgeInsets.only(left: 45.0, right: 45.0),
       child: Container(
@@ -60,6 +82,7 @@ class _RoutePageState extends State<RoutePage> {
                 SizedBox(width: 14.0),
                 Expanded(
                   child: TextFormField(
+                    controller: controller,
                     keyboardType: TextInputType.emailAddress,
                     textCapitalization: TextCapitalization.none,
                     style: TextStyle(

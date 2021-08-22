@@ -3,7 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:ticket_chai/view/widgets/custom_input.dart';
 
 class CheckoutFrom extends StatelessWidget {
-  CheckoutFrom();
+  CheckoutFrom(
+      TextEditingController nameController, TextEditingController phoneNoController, TextEditingController totalSeatController) {
+    this.nameController = nameController;
+    this.phoneNoController = phoneNoController;
+    this.totalSeatController = totalSeatController;
+  }
+
+  TextEditingController nameController = TextEditingController();
+  TextEditingController phoneNoController = TextEditingController();
+  TextEditingController totalSeatController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +35,25 @@ class CheckoutFrom extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    CustomInput(labelName: "Name", labelIcon: Icons.add, keyboardType: TextInputType.name, obscure: true),
-                    CustomInput(labelName: "Phone No", labelIcon: Icons.add, keyboardType: TextInputType.number, obscure: true),
-                    CustomInput(labelName: "Total Seat", labelIcon: Icons.add, keyboardType: TextInputType.number, obscure: true),
-                    CustomInput(labelName: "Address", labelIcon: Icons.add, keyboardType: TextInputType.text, obscure: true)
+                    CustomInput(
+                        labelName: "Name",
+                        labelIcon: Icons.add,
+                        keyboardType: TextInputType.name,
+                        obscure: false,
+                        controller: nameController),
+                    CustomInput(
+                        labelName: "Phone No",
+                        labelIcon: Icons.add,
+                        keyboardType: TextInputType.number,
+                        obscure: false,
+                        controller: phoneNoController),
+                    CustomInput(
+                        labelName: "Total Seat",
+                        labelIcon: Icons.add,
+                        keyboardType: TextInputType.number,
+                        obscure: false,
+                        controller: totalSeatController),
+                    // CustomInput(labelName: "Address", labelIcon: Icons.add, keyboardType: TextInputType.text, obscure: true)
                   ],
                 ),
               ),
