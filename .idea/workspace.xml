@@ -98,8 +98,6 @@
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/icons/Icon-512.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mopa_sample_app/web/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/Checkout/checkoutForm.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/Checkout/utils/textInfo.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Blood-Donation-App" beforeDir="false" afterPath="$PROJECT_DIR$/../Blood-Donation-App" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dokanee-Cpnael-Mobile-App-Shohan" beforeDir="false" afterPath="$PROJECT_DIR$/../Dokanee-Cpnael-Mobile-App-Shohan" afterDir="false" />
@@ -1216,35 +1214,7 @@
       <change beforePath="$PROJECT_DIR$/../dokanee_app" beforeDir="false" afterPath="$PROJECT_DIR$/../dokanee_app" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../flutter_ecommerce_template" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_ecommerce_template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mopa_sample_app/lib/SplashView.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb1ff3d67e0216bfd57235f99fb61cce/kernel_snapshot.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/search_buses.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/addFlightScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/addTrip.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/Route_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/Route_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/checkout_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/checkout_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/AddFlightScreen/utils/payment.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/Flight/flightPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/Trip/flightPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/Flight/flight_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/Trip/flight_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/Home/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/Home/homePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zaatun-android-app" beforeDir="false" afterPath="$PROJECT_DIR$/../zaatun-android-app" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -1277,24 +1247,24 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/view/AddFlightScreen" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\AddFlightScreen" />
+      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view" />
+      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\Home\utils\Banner" />
+      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets" />
+      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets\logo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\AddFlightScreen" />
       <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\DetailsScreen" />
       <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets\logo" />
       <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets" />
       <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\Home\utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view" />
-      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\Home\utils\Banner" />
-      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets" />
-      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\assets\logo" />
-      <recent name="H:\backup may\183-35-2590\AndroidStudioProjects\ticket_chai\lib\view\AddFlightScreen\utils" />
     </key>
   </component>
   <component name="RunManager">
@@ -1354,7 +1324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629582350507</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Edited">
+      <created>1629619382156</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629619382156</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1384,34 +1361,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="224" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1629617620156" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1629582349232">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1629619365504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1629582349232" />
-    <state width="960" height="171" key="GridCell.Tab.0.bottom" timestamp="1629618859310">
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1629619365504" />
+    <state width="954" height="171" key="GridCell.Tab.0.bottom" timestamp="1629621618383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="960" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629618859310" />
-    <state width="960" height="171" key="GridCell.Tab.0.center" timestamp="1629618859309">
+    <state width="954" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629621618383" />
+    <state width="954" height="171" key="GridCell.Tab.0.center" timestamp="1629621618383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="960" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
-    <state width="960" height="171" key="GridCell.Tab.0.left" timestamp="1629618859309">
+    <state width="954" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629621618383" />
+    <state width="954" height="171" key="GridCell.Tab.0.left" timestamp="1629621618383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="960" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
-    <state width="960" height="171" key="GridCell.Tab.0.right" timestamp="1629618859309">
+    <state width="954" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629621618383" />
+    <state width="954" height="171" key="GridCell.Tab.0.right" timestamp="1629621618383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="960" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629618859309" />
+    <state width="954" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629621618383" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1629581230818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1629581230818" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1629582361064">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1629619405779">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1629582361064" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1629619405779" />
     <state x="98" y="47" key="new project wizard" timestamp="1628931027664">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
