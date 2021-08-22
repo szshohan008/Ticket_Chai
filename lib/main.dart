@@ -3,7 +3,7 @@ import 'package:framy_annotation/framy_annotation.dart';
 import 'package:ticket_chai/view/Home/utils/customDrawerGuitar.dart';
 import 'view/Home/utils/customDrawer.dart';
 import 'view/Home/utils/header.dart';
-import 'view/AddFlightScreen/addFlightScreen.dart';
+import 'view/AddFlightScreen/addTrip.dart';
 import 'view/Home/homePage.dart';
 import 'testdraw.dart';
 import 'view/WelcomeScreen/welcomeScreen.dart';

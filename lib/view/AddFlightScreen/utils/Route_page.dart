@@ -1,7 +1,11 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:http/http.dart' as http;
 
 class RoutePage extends StatefulWidget {
   @override
@@ -9,6 +13,30 @@ class RoutePage extends StatefulWidget {
 }
 
 class _RoutePageState extends State<RoutePage> {
+  final String url = "ticket-chai-backend.herokuapp.com/";
+  List data;
+
+  @override
+  void initState(){
+    super.initState();
+    this.getJsonData();
+  }
+
+  Future<String> getJsonData() async{
+    var response = await http.get(
+      //Encode the url
+      Uri.encodeFull(url),
+      //only accept json response
+      headers: {"Accept": "application/json"}
+    );
+    print(response.body);
+
+    setState(() {
+     // var convertDataToJson = JSON.decode(response.body);
+      //data = convertDataToJson["results"];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

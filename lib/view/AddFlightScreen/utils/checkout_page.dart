@@ -4,12 +4,12 @@ import 'package:ticket_chai/Constants/ColorConstants.dart';
 import 'package:ticket_chai/Model/display/plane_curve.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 
-class CheckOutPage extends StatefulWidget {
+class payment extends StatefulWidget {
   @override
-  _CheckOutPageState createState() => _CheckOutPageState();
+  _paymentState createState() => _paymentState();
 }
 
-class _CheckOutPageState extends State<CheckOutPage> {
+class _paymentState extends State<payment> {
   // bool pressbutton = false;
 
   // onButtonClick() {
@@ -29,132 +29,8 @@ class _CheckOutPageState extends State<CheckOutPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Dhaka',
-                          style: kCountryAbText,
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.07),
-                        Text(
-                          'FLIGHT DATE',
-                          style: kFlightDate,
-                        ),
-                        Text(
-                          'May 19',
-                          style: kFlightDateDisplay,
-                        ),
-                      ],
-                    ),
-                  ),
-                  // SizedBox(width: 6.0),
-                  Column(
-                    children: [
-                      SizedBox(height: 20.0),
-                      CustomPaint(
-                        painter:
-                            PlaneCurved(bodyColor: kFloatingButton, width: 0.2),
-                        child: Container(
-                          //height: 0.0,
-                          width: 48.0,
-                        ),
-                      ),
-                      Text(
-                        '8hr 00m',
-                        style: kFlightDateDisplay,
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.07),
-                      Text(
-                        'Seat No',
-                        style: kFlightDate,
-                      ),
-                      Text(
-                        'C1',
-                        style: kFlightDateDisplay,
-                      ),
-                    ],
-                  ),
-                  //Spacer(),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Rang',
-                          style: kCountryAbText,
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.07),
-                        Text(
-                          'Hanif Enterprice',
-                          style: kFlightDate,
-                        ),
-                        Text(
-                          '',
-                          style: kFlightDateDisplay,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'DATE',
-                        style: kFlightDate,
-                      ),
-                      Text(
-                        'May 19',
-                        style: kFlightDateDisplay,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'SEAT',
-                        style: kFlightDate,
-                      ),
-                      Text(
-                        '1',
-                        style: kFlightDateDisplay,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'CLASS',
-                        style: kFlightDate,
-                      ),
-                      Text(
-                        'Non Ac',
-                        style: kFlightDateDisplay,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-              Divider(
-                thickness: 0.3,
-                color: kTextColor,
-              ),
               Padding(
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * 0.55,

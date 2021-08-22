@@ -5,7 +5,7 @@ import 'package:ticket_chai/view/Home/utils/Banner/Banner.dart';
 import '../../Model/display/buses.dart';
 import 'utils/header.dart';
 import '../../Model/display/title.dart';
-import '../AddFlightScreen/addFlightScreen.dart';
+import '../AddFlightScreen/addTrip.dart';
 import 'package:ticket_chai/Constants/TextConstants.dart';
 
 @framyWidget
