@@ -6,10 +6,11 @@ import 'package:ticket_chai/Model/display/select_bar.dart';
 import 'package:ticket_chai/Model/display/title.dart';
 import 'package:ticket_chai/model/TicketPurchaseModel.dart';
 import 'package:ticket_chai/networking/BusNetwork.dart';
-import 'package:ticket_chai/view/AddFlightScreen/Checkout/checkoutForm.dart';
-import 'package:ticket_chai/view/AddFlightScreen/utils/Route_page.dart';
-import 'package:ticket_chai/view/AddFlightScreen/utils/checkout_page.dart';
-import 'package:ticket_chai/view/AddFlightScreen/utils/flight_pageview.dart';
+import 'package:ticket_chai/view/AddBusScreen/utils/Route_page.dart';
+import 'package:ticket_chai/view/AddBusScreen/utils/checkout_page.dart';
+import 'package:ticket_chai/view/AddBusScreen/utils/flight_pageview.dart';
+
+import 'Checkout/checkoutForm.dart';
 
 // import 'package:emirates_app/display/select_bar.dart';
 // import 'package:flutter_icons/flutter_icons.dart';

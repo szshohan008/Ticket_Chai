@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:framy_annotation/framy_annotation.dart';
 import 'package:ticket_chai/Constants/ColorConstants.dart';
+import 'package:ticket_chai/view/AddBusScreen/addTrip.dart';
 import 'package:ticket_chai/view/Home/utils/Banner/Banner.dart';
 
 import '../../Model/display/buses.dart';
-import '../AddFlightScreen/addTrip.dart';
 import 'utils/header.dart';
 
 @framyWidget

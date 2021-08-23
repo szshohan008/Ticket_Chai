@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:framy_annotation/framy_annotation.dart';
+import 'package:ticket_chai/view/AddBusScreen/addTrip.dart';
 import 'package:ticket_chai/view/Home/utils/customDrawerGuitar.dart';
 import 'view/Home/utils/customDrawer.dart';
 import 'view/Home/utils/header.dart';
-import 'view/AddFlightScreen/addTrip.dart';
 import 'view/Home/homePage.dart';
 import 'testdraw.dart';
-import 'view/WelcomeScreen/welcomeScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,9 +47,8 @@ class MyApp extends StatelessWidget {
               TargetPlatform.android: ZoomPageTransitionsBuilder(),
             }),
       ),
-      initialRoute: WelcomeScreen.id,
+      initialRoute: HomePage.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
         HomePage.id: (context) => child,
         AddFlightScreen.id: (context) => AddFlightScreen(),
         TestDraw.id: (context) => TestDraw(),
